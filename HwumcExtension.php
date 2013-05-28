@@ -9,7 +9,7 @@ class HwumcExtension extends Extension
 		return array(
 			"name" => "HWUMC Core",
 			"gitviewer" => "https://gerrit.stwalkerster.co.uk/gitweb?p=siteframework/extensions/hwumc-core.git;a=tree;h=",
-			"description" => "An example extension.",
+			"description" => "HWUMC core",
 			"filepath" => dirname(__FILE__),
 		);
 	}
