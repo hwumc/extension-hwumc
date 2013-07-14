@@ -7,6 +7,13 @@
     <RootNamespace>extension-hwumc-core</RootNamespace>
     <OutputType>Library</OutputType>
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <IISProjectUrl>http://localhost:59903/</IISProjectUrl>
+    <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+    <Server>Custom</Server>
+    <CustomServerUrl>http://localhost:8089/hwumc/</CustomServerUrl>
+    <PublishEvent>None</PublishEvent>
+    <PHPDevAutoPort>True</PHPDevAutoPort>
+    <PHPDevPort>13555</PHPDevPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -15,6 +22,14 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HwumcExtension.php" />
+    <Compile Include="HwumcCoreHooks.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HwumcCoreExtension.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataObjects" />
+    <Folder Include="Templates" />
+    <Folder Include="Page" />
   </ItemGroup>
 </Project>

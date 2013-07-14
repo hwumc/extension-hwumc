@@ -2,7 +2,7 @@
 // check for invalid entry point
 if(!defined("HMS")) die("Invalid entry point");
 
-class HwumcExtension extends Extension
+class HwumcCoreExtension extends Extension
 {
 	public function getExtensionInformation()
 	{
@@ -16,12 +16,17 @@ class HwumcExtension extends Extension
 	
 	protected function autoload( $class )
 	{
-	
+        $files = array(
+            "HwumcCoreHooks" => "HwumcCoreHooks.php",
+        );
+		
+		return array_key_exists($class, $files) ? $files[$class] : null;
 	}
 	
 	protected function registerHooks()
 	{
-	
+        Hooks::register( "BuildPageSearchPaths", array("HwumcCoreHooks","buildPageSearchPaths"));
+        Hooks::register( "PostSetupSmarty", array("HwumcCoreHooks","smartySetup"));
 	}
 	
 
