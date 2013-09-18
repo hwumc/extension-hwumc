@@ -27,6 +27,7 @@ class HwumcCoreExtension extends Extension
 	{
         Hooks::register( "BuildPageSearchPaths", array("HwumcCoreHooks","buildPageSearchPaths"));
         Hooks::register( "PostSetupSmarty", array("HwumcCoreHooks","smartySetup"));
+        Hooks::register( "PostRunPage", array("HwumcCoreHooks","postRunPage"));
 	}
 	
 
