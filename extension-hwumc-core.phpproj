@@ -30,10 +30,19 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="HwumcCoreExtension.php" />
+    <Compile Include="Page\PageDownloadSoftware.php">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataObjects" />
     <Folder Include="Templates" />
     <Folder Include="Page" />
+    <Folder Include="Templates\webmaster" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\webmaster\download.tpl">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
 </Project>
