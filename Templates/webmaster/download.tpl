@@ -4,6 +4,7 @@
 <p>The site's software can be downloaded by clicking the button below. This package is an almost-complete copy of the filesystem, except for a number of items:</p>
 <ol>
 	<li><tt>/.my.cnf</tt>: The MySQL client configuration file.</li>
+	<li><tt>/.my.ro.cnf</tt>: The read-only MySQL client configuration file.</li>
 	<li><tt>/config.local.php</tt>: The local software's installation configuration.</li>
 	<li>Any uploaded files</li>
 </ol>
@@ -13,15 +14,16 @@
 
 <p>If you wish to migrate to a new web host, please verify that the new host is capable of supporting the following software (or above):
 <ul>
-	<li>PHP 5.3</li>
+	<li>PHP 5.5</li>
 	<li>PHP Extensions:
 		<ul>
 			<li>PDO 1.0.4</li>
 			<li>OpenSSL</li>
 			<li>PDO MySQL driver (pdo_mysql)</li>
+			<li>fileinfo</li>
 		</ul>
 	</li>
-	<li>MySQL Server 5.5</li>
+	<li>MySQL Server 5.5 (or equivalent)</li>
 </ul>
 </p>
 
